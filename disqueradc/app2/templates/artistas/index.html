@@ -1,35 +1,42 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
+{% block title%} Disquera | Artistas {% endblock%} 
+   
+   
+{% block contenido%} 
+   <h1 class="text-center">Artistas</h1>
+    <div class="mb-2">
+        <a href="{% url 'artista-add' %}" class="btn btn-primary" role="button"><i class="bi bi-plus-circle"></i> Registrar Artista</a>
+    </div>
+   <div class="table-responsive">
+        <table class="table align-middle">
+            <thead class="table-dark text-center">
+                <tr>
+                    <th>ID</th>
+                    <th>Foto</th>
+                    <th>Nombre <br> Artístico</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Disquera</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            <thead>
+            <tbody class="text-center">
+                <td>ID</td>
+                <td>Foto</td>
+                <td>Nombre <br> Artístico</td>
+                <td>Nombre</td>
+                <td>Apellido</td>
+                <td>Disquera</td>
+                <td>Estado</td>
+                <td>
+                    <a href= {% url 'edit-artista' %} class="btn btn-warning"><i class="bi bi-pencil"></i> Editar</a>
+                    |
+                    <a href="" class="btn btn-danger"><i class="bi bi-trash"></i> Eliminar</a>
+                </td>
+            </tbody>
 
-{% block title %} Disquera | Artistas {% endblock%}
-{% block contenido %}
-<h1 class="text-center">Artistas</h1>
-  <div>
-    
-  </div>
-      <div class="table responsive">
-        <table>
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Foto</th>
-              <th>Nombre <br>Artistico</th>
-              <th>Nombre</th>
-              <th>Apellido</th>
-              <th>Disquera</th>
-              <th>Estado</th>
-              <th>Acciones</th>
-            </tr>
-          </thead>
-          <tbody>
-              <td>ID</td>
-              <td>Foto</td>
-              <td>Nombre <br>Artistico</td>
-              <td>Nombre</td>
-              <td>Apellido</td>
-              <td>Disquera</td>
-              <td>Estado</td>
-              <td>Acciones</td>
-          </tbody>
         </table>
-      </div>
-{% endblock%}
+   </div>
+   
+{% endblock%} 

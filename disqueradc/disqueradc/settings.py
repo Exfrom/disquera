@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'disqueradc.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME':'dbdisquera',
+        'NAME': 'dbdisquera',
         'USER': 'root',
         'PASSWORD': ' ',
         'HOST': 'localhost',
