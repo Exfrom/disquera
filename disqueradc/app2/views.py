@@ -15,3 +15,6 @@ def artista(request):#vistas inicio artista
 
 def addartista(request):
     return render (request,'artistas/crear.html')
+
+def editartista(request):
+    return render(request, 'artistas/editar.html' )
