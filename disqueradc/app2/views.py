@@ -10,11 +10,11 @@ def inicio(request):#vista 1
 def pagina2(request):
     return render(request, 'views/pagina2.html')
 
-def artista(request):#vistas inicio artista
-    return render(request,'artistas/index.html')
+def artista(request): #vista inicio artistas
+     return render(request,'artistas/index.html')
 
 def addartista(request):
-    return render (request,'artistas/crear.html')
+    return render(request,'artistas/crear.html')
 
 def editartista(request):
-    return render(request, 'artistas/editar.html' )
+    return render(request, 'artistas/editar.html')

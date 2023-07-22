@@ -79,7 +79,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'dbdisquera',
         'USER': 'root',
-        'PASSWORD': ' ',
+        'PASSWORD':'',
         'HOST': 'localhost',
         'POST': '3306'
     }
