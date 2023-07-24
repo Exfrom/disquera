@@ -18,3 +18,12 @@ def addartista(request):
 
 def editartista(request):
     return render(request, 'artistas/editar.html')
+
+def disquera(request):
+    return render(request, 'disquera/index.html')
+
+def adddisquera(request):
+    return render(request,'disquera/crear.html')
+
+def editdisquera(request):
+    return render(request, 'disquera/editar.html')

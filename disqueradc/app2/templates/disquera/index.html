@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title%} disquera | disquera {% endblock%} 
+   
+   
+{% block contenido%} 
+   <h1 class="text-center">disquera</h1>
+    <div class="mb-2">
+        <a href="{% url 'artista-add' %}" class="btn btn-primary" role="button"><i class="bi bi-plus-circle"></i> Registrar Artista</a>
+    </div>
+   <div class="table-responsive">
+        <table class="table align-middle">
+            <thead class="table-dark text-center">
+                <tr>
+                    <th>IdDisquera</th>
+                    <th>nitDisquera</th>
+                    <th>NombreDisquera</th>
+                    <th>TelefonoDisquera</th>
+                    <th>DireccionDisquera</th>
+                    <th>EstadoDisquera</th>
+                    <th>Acciones</th>
+                </tr>
+            <thead>
+            <tbody class="text-center">
+                <td>IdDisquera</td>
+                <td>nitDisquera</td>
+                <td>NombreDisquera</td>
+                <td>TelefonoDisquera</td>
+                <td>DireccionDisquera</td>
+                <td>EstadoDisquera</td>
+                <td>Acciones</td>
+                <td>
+                    <a href= {% url 'edit-artista' %} class="btn btn-warning"><i class="bi bi-pencil"></i> Editar</a>
+                    |
+                    <a href="" class="btn btn-danger"><i class="bi bi-trash"></i> Eliminar</a>
+                </td>
+            </tbody>
+
+        </table>
+   </div>
+   
+{% endblock%} 
