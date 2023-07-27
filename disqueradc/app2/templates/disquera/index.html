@@ -5,7 +5,7 @@
 {% block contenido%} 
    <h1 class="text-center">disquera</h1>
     <div class="mb-2">
-        <a href="{% url 'artista-add' %}" class="btn btn-primary" role="button"><i class="bi bi-plus-circle"></i> Registrar Artista</a>
+        <a href="{% url 'disquera-add' %}" class="btn btn-primary" role="button"><i class="bi bi-plus-circle"></i> Registrar Disquera</a>
     </div>
    <div class="table-responsive">
         <table class="table align-middle">
@@ -29,7 +29,7 @@
                 <td>EstadoDisquera</td>
                 <td>Acciones</td>
                 <td>
-                    <a href= {% url 'edit-artista' %} class="btn btn-warning"><i class="bi bi-pencil"></i> Editar</a>
+                    <a href= {% url 'edit-disquera' %} class="btn btn-warning"><i class="bi bi-pencil"></i> Editar</a>
                     |
                     <a href="" class="btn btn-danger"><i class="bi bi-trash"></i> Eliminar</a>
                 </td>
