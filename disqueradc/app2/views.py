@@ -10,6 +10,7 @@ def inicio(request):#vista 1
 def pagina2(request):
     return render(request, 'views/pagina2.html')
 
+#artista
 def artista(request): #vista inicio artistas
      return render(request,'artistas/index.html')
 
@@ -19,6 +20,7 @@ def addartista(request):
 def editartista(request):
     return render(request, 'artistas/editar.html')
 
+#disquera
 def disquera(request):
     return render(request, 'disquera/index.html')
 
@@ -27,3 +29,6 @@ def adddisquera(request):
 
 def editdisquera(request):
     return render(request, 'disquera/editar.html')
+
+def elimdisquera(request):
+    return render(request, 'disquera/eliminar.html')
