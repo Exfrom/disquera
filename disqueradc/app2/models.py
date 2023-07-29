@@ -7,6 +7,11 @@ class Disquera(models.Model):
     telefonodisquera = models.CharField(max_length=15)
     direcciondisquera = models.CharField(max_length=100)
     estadodisquera = models.BooleanField()
+    acciones = models.CharField(max_length=100)
+    
+    def __str__(self):
+        row="Disquera: =" +self.nombredisquera
+        return row
 
 class Artista(models.Model):
     id = models.AutoField(primary_key=True)

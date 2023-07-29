@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Disquera
 # Create your views here.
 
 
@@ -22,7 +23,9 @@ def editartista(request):
 
 #disquera
 def disquera(request):
-    return render(request, 'disquera/index.html')
+    disqueras=Disquera.objects.all()
+    #print(Disqueras)
+    return render(request, 'disquera/index.html',{'disqueras':disqueras})
 
 def adddisquera(request):
     return render(request,'disquera/crear.html')
