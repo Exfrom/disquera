@@ -14,7 +14,7 @@ class Artista(models.Model):
     tipoDocumento = models.CharField(max_length=25)
     nombreArtista = models.CharField(max_length=50)
     apellidosArtista = models.CharField(max_length=50)
-    fNacimiento = models.DateField() 
+    fNacimiento = models.DateField(null=True)
     emailArtista = models.CharField(max_length=100)
     fotoArtista = models.CharField(max_length=255)
     iddisquerafk = models.ForeignKey(Disquera, on_delete=models.CASCADE)
