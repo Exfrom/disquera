@@ -22,7 +22,12 @@
                 </tr>
             <thead>
             <tbody class="text-center">
-                <td>ID</td>
+            {% for a in artistas %}
+            <tr>
+
+                <td>{{a.id}}</td>
+                <td>{{a.noDocumento}}</td>
+                <td>{{a.tipoDocumento}}</td>
                 <td>Foto</td>
                 <td>Nombre <br> Artístico</td>
                 <td>Nombre</td>
@@ -34,6 +39,8 @@
                     |
                     <a href="" class="btn btn-danger"><i class="bi bi-trash"></i> Eliminar</a>
                 </td>
+            </tr>
+            {% endfor%}
             </tbody>
 
         </table>

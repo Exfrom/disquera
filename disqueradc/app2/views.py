@@ -1,6 +1,8 @@
+import array
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Disquera
+from .models import Artista
 # Create your views here.
 
 
@@ -13,7 +15,8 @@ def pagina2(request):
 
 #artista
 def artista(request): #vista inicio artistas
-     return render(request,'artistas/index.html')
+    artistas=Artista.objects.all()
+    return render(request,'artistas/index.html',{'artistas':artistas})
 
 def addartista(request):
     return render(request,'artistas/crear.html')
