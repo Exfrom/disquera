@@ -12,10 +12,14 @@
             <thead class="table-dark text-center">
                 <tr>
                     <th>ID</th>
+                    <th>No.Documento</th>
+                    <th>TipoDocumento</th>
                     <th>Foto</th>
                     <th>Nombre <br> Artístico</th>
                     <th>Nombre</th>
                     <th>Apellido</th>
+                    <th>Fecha de Nacimiento</th>
+                    <th>Email</th>
                     <th>Disquera</th>
                     <th>Estado</th>
                     <th>Acciones</th>
@@ -28,12 +32,16 @@
                 <td>{{a.id}}</td>
                 <td>{{a.noDocumento}}</td>
                 <td>{{a.tipoDocumento}}</td>
-                <td>Foto</td>
-                <td>Nombre <br> Artístico</td>
-                <td>Nombre</td>
-                <td>Apellido</td>
-                <td>Disquera</td>
-                <td>Estado</td>
+                <td><img src="{{ a.fotoArtista.url }}"></td>
+                <td>{{a.nombreArtista}}</td>
+                <td>{{a.nombreArtista}}</td>
+                <td>{{a.apellidosArtista}}</td>
+                <td>{{a.fNacimiento}}</td>
+                <td>{{a.emailArtista}}</td>
+                <td>{{a.iddisquerafk}}</td>
+                <td>{{a.estadoArtista}}</td>
+                <td>{{a.acciones}}</td>
+                
                 <td>
                     <a href= {% url 'edit-artista' %} class="btn btn-warning"><i class="bi bi-pencil"></i> Editar</a>
                     |

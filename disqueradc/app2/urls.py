@@ -1,5 +1,7 @@
 from django.urls import path
 from . import views
+from django.conf import settings
+from django.contrib.staticfiles.urls import static
 
 urlpatterns = [
     path('',views.inicio,name='inicio'), #cada path es una ruta
@@ -14,4 +16,4 @@ urlpatterns = [
     path('disquera/add',views.adddisquera,name='disquera-add'),
     path('disquera/edit',views.editdisquera, name='edit-disquera'),
     path('disquera/elim',views.elimdisquera, name='elim-disquera'),
-]
+]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

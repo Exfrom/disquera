@@ -18,14 +18,16 @@ class Artista(models.Model):
     id = models.AutoField(primary_key=True)
     noDocumento = models.CharField(max_length=25, verbose_name='No Documento')
     tipoDocumento = models.CharField(max_length=25, verbose_name='Tipo Documento')
+    nombreArtistico=models.CharField(max_length=50, verbose_name='Nombre Artistico',default='')
     nombreArtista = models.CharField(max_length=50, verbose_name='Nombre')
     apellidosArtista = models.CharField(max_length=50, verbose_name='Apellido')
     fNacimiento = models.DateField(null=True)
     emailArtista = models.CharField(max_length=100)
-    fotoArtista = models.ImageField(upload_to='imagenes/',null=True,blank=True)
+    fotoArtista = models.ImageField(upload_to='imagenes/', null=True, blank=True)
     iddisquerafk = models.ForeignKey(Disquera, on_delete=models.CASCADE)
     estadoArtista = models.BooleanField()
     acciones=models.CharField(max_length=100)
+    
     def __str__(self):
         row="Artista: =" +self.nombreArtista
         return row
@@ -42,7 +44,7 @@ class Album(models.Model):
     anioPublicacion = models.CharField(max_length=10)
     idArtistaFK = models.ForeignKey(Artista, on_delete=models.CASCADE)
     idGeneroFK = models.ForeignKey(Genero, on_delete=models.CASCADE)
-    fotoAlbum = models.ImageField(upload_to='imagenes/',null=True,blank=True) 
+    fotoAlbum = models.ImageField(upload_to='imagenes/', null=True, blank=True) 
     estadoAlbum = models.BooleanField()
     acciones=models.CharField(max_length=100)
 
